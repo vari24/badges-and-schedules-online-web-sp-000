@@ -3,29 +3,29 @@ def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(attendees)
+def batch_badge_creator(speakers)
   newarray = []
-  attendees.collect do |name|
+  speakers.collect do |name|
     newarray.push("Hello, my name is #{name}.")
   end
   return newarray
 end
 
-def assign_rooms(attendees)
+def assign_rooms(speakers)
   newarray = []
   counter = 0
-  attendees.collect do |name|
+  speakers.collect do |name|
         counter += 1
   "Hello, #{name}! You'll be assigned to room #{counter}!"
 end
 end
 
-def printer(attendees)
-  batch_badge_creator(attendees).each do |value|
-    puts value
+def printer(speakers)
+  batch_badge_creator(speakers).each do |person|
+    puts person
   end
 
-   assign_rooms(attendees).each do |badge|
+   assign_rooms(speakers).each do |badge|
     puts badge
   end
 end
